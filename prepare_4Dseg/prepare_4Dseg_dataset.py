@@ -105,7 +105,7 @@ def prepare_4Dseg_data(data_dir, output_dir, datalist_path):
         data_dir = os.listdir(data_dir)
         for seg2D_dir in data_dir:
             print(os.path.join(seg2D_dir, video_name, "*mask"))
-            if os.path.isdir(os.path.join(seg2D_dir, video_name, "*mask")):
+            if os.path.isdir(os.path.join(seg2D_dir, video_name, "mask")):
                 data_2Dseg_dir = seg2D_dir
                 cnt += 1
         assert cnt == 1
