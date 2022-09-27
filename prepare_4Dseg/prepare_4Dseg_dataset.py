@@ -102,8 +102,8 @@ def prepare_4Dseg_data(data_dir, output_dir, datalist_path):
 
         cnt = 0
         data_2Dseg_dir = None
-        data_dir = os.listdir(data_dir)
-        for seg2D_dir in data_dir:
+        data_dirs = os.listdir(data_dir)
+        for seg2D_dir in data_dirs:
             print(os.path.join(data_dir, seg2D_dir, video_name, "2Dseg"))
             if os.path.isdir(os.path.join(data_dir, seg2D_dir, video_name, "2Dseg")):
                 data_2Dseg_dir = seg2D_dir
